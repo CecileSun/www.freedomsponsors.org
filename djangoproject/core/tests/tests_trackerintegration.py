@@ -94,7 +94,7 @@ class TrackerUtilsTest(TestCase):
 
     def test_chromium_googlecode(self):
         issueInfo = fetchIssueInfo("http://code.google.com/p/chromium/issues/detail?id=140028")
-        assert not issueInfo.error
+        assert (not issueInfo.error)
         assert issueInfo.tracker == 'GOOGLECODE'
         assert issueInfo.key == '140028'
         assert issueInfo.project_trackerURL == 'http://code.google.com/p/chromium/issues/list'
